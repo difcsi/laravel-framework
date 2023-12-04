@@ -563,7 +563,7 @@ trait ManagesFrequencies
     {
         $this->dailyAt($time);
 
-        return $this->spliceIntoPosition(3, Carbon::now()->endOfMonth()->day);
+        return $this->spliceIntoPosition(3, Carbon::now($this->timezone)->endOfMonth()->day);
     }
 
     /**
